@@ -42,3 +42,10 @@ body{
 .bg-custom-1 {
     background-color: rgb(224, 154, 24);
 }
+
+.tab-content{
+    padding: 20px;
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+}
