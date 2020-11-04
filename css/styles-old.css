@@ -50,7 +50,6 @@ body{
     border-bottom:1px solid #ddd;
 }
 
-
 .carousel{
     background:#512DA8;
 
@@ -71,19 +70,4 @@ body{
     position: absolute;
     bottom:0px;
     z-index: 1;
-}
-
-.modal-body {
-    background:#D1C4E9 ;
-}
-
-.modal-header
-{
-    background:#512DA8 ;
-    color:floralwhite;
-
-}
-
-.modal-header-close{
-    color: floralwhite;
 }

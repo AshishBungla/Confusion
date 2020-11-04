@@ -29,8 +29,8 @@
                      <li class ="nav-item"><a class= "nav-link" href = "#"><span class="fa fa-list fa-md"></span> Menu</a></li>
                      <li class ="nav-item"><a class= "nav-link" href = "./contactus.html"><span class="fa fa-address-card fa-md"></span> Contact</a></li>
                   </ul>
-                  <span class="navbar-text">
-                      <a data-toggle="modal" data-target="#loginModal">
+                  <span class="navbar-text" id ="LoginButton">
+                      <a>
                           <span class="fa fa-sign-in">
                               Login
                           </span>
@@ -39,15 +39,16 @@
                 </div>
         </div>
     </nav>
-    <div id="loginModal" class="modal fade" role="dialog">
+    
+    <div class="modal fade"  id="LoginModal" role="dialog">
         <div class ="modal-dialog model-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="crossButton2" data-dismiss="modal">
                         &times;
                     </button>
-                </div>
+                </div> 
                 <div class="modal-body">
                     <form>
                         <div class="form-row">
@@ -77,12 +78,13 @@
             </div>
         </div>
     </div>
+    
     <div class=" modal fade" id="ReserveModal"  role="dialog">
         <div class ="modal-dialog model-lg" role="content">
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title ">Reserve a Table</h4>
-                    <button type="button" class="close" data-dismiss="modal">
+                    <button type="button" class="close" id="crossButton1" data-dismiss="modal">
                         &times;
                     </button>
                 </div>
@@ -106,7 +108,7 @@
                             </div>
                             <div class = "form-group row " style="padding-bottom: 15px;" >
                                 <label for="Section" class="col-md-3 col-form-label">Section</label>
-                                <div class="col-md-7 btn-group btn-group-toggle" data-toggle="buttons">
+                                <div class="col-md-6 btn-group btn-group-toggle" data-toggle="buttons">
                                     <label class="btn btn-success active btn-md" >
                                       <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-smoking
                                     </label>
@@ -138,7 +140,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> 
     <header class = "jumbotron">
         <div class = "container">
             <div class = "row row-header justify-content-between">
@@ -149,8 +151,8 @@
                 <div class="col-12 col-sm-3 align-self-center row justify-content-center" >
                     <img src="img/logo.png" class="img-fluid">
                 </div>
-                <div class ="col-12 col-sm-3 align-self-center order-sm-last" >
-                    <a role="button" class ="btn btn-block nav-link btn-warning" data-toggle="modal" data-target="#ReserveModal" >Reserve Table</a>
+                <div class ="col-12 col-sm-3 align-self-center order-sm-last" id ="ReserveButton">
+                    <a role="button" class ="btn btn-block nav-link btn-warning">Reserve Table</a>
                 </div>
             
             </div>
@@ -362,6 +364,14 @@
                 $('#carouselButton').children('span').removeClass('fa-play');
                 $('#carouselButton').children('span').addClass('fa-pause');
              }
+        });
+        $('#ReserveButton').click(function()
+        {
+            $('#ReserveModal').modal('show');
+        });
+        $('#LoginButton').click(function()
+        {
+            $('#LoginModal').modal('show');
         });
     });
  </script>
